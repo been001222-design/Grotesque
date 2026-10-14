@@ -1,0 +1,7 @@
+{
+  "title": "Grotesque",
+  "links": [
+    {"name": "사이트 1", "url": "https://example.com"},
+    {"name": "사이트 2", "url": "https://example.org"}
+  ]
+}
