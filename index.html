@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Grotesque</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:#000;color:#fff}body{font-family:Arial,"Noto Sans KR",sans-serif}main{width:min(620px,calc(100% - 40px));margin:90px auto}h1{font-size:22px;font-weight:500;margin:0 0 34px}.links{display:flex;flex-direction:column}a{color:#fff;text-decoration:none;font-size:16px;padding:17px 0;border-bottom:1px solid #222}a:first-child{border-top:1px solid #222}a:hover{opacity:.65}@media(max-width:600px){main{margin:55px auto;width:calc(100% - 32px)}}
+</style>
+</head>
+<body><main><h1 id="title">Grotesque</h1><div class="links" id="links"></div></main>
+<script>
+fetch('links.json?'+Date.now()).then(r=>r.json()).then(d=>{document.title=d.title||'Grotesque';document.getElementById('title').textContent=d.title||'Grotesque';const b=document.getElementById('links');b.innerHTML='';(d.links||[]).forEach(x=>{const a=document.createElement('a');a.href=x.url;a.target='_blank';a.rel='noopener noreferrer';a.textContent=x.name;b.appendChild(a)})}).catch(()=>document.getElementById('links').textContent='링크를 불러올 수 없습니다.');
+</script></body></html>
